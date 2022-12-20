@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Remote Labs </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+        integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../vanta.net.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1 style="text-align: center;">Experiment Theory</h1>
+        <div class="theory">
+            <h3> How Does a PID Controller Work? </h3>
+            <p>A proportional integral derivative (PID) controller can be used as a means of controlling temperature,
+                pressure, flow and other process variables. As its name implies, a PID controller combines proportional
+                control with additional integral and derivative adjustments which help the unit automatically compensate
+                for changes in the system.</p>
+            <h3> PID Controller Basics </h3>
+            <p> The purpose of a PID controller is to force feedback to match a setpoint, such as a thermostat that
+                forces the heating and cooling unit to turn on or off based on a set temperature. PID controllers are
+                best used in systems which have a relatively small mass and those which react quickly to changes in the
+                energy added to the process. It is recommended in systems where the load changes often and the
+                controller is expected to compensate automatically due to frequent changes in setpoint, the amount of
+                energy available, or the mass to be controlled. </p>
+            <h3> PID Controller Working Principle </h3>
+            <p>
+                The working principle behind a PID controller is that the proportional, integral and derivative terms
+                must be individually adjusted or "tuned." Based on the difference between these values a correction
+                factor is calculated and applied to the input. For example, if an oven is cooler than required, the heat
+                will be increased. Here are the three steps:
+            <ol>
+                <li><b>Proportional tuning</b> involves correcting a target proportional to the difference. Thus, the
+                    target value is never achieved because as the difference approaches zero, so too does the applied
+                    correction.</li>
+                <li><b>Integral tuning</b> attempts to remedy this by effectively cumulating the error result from the
+                    "P" action to increase the correction factor. For example, if the oven remained below temperature,
+                    “I” would act to increase the head delivered. However, rather than stop heating when the target is
+                    reached, "I" attempts to drive the cumulative error to zero, resulting in an overshoot. </li>
+                <li><b>Derivative tuning</b> attempts to minimize this overshoot by slowing the correction factor
+                    applied as the target is approached.</li>
+            </ol>
+            </p>
+            <h3> PID Controller Applications </h3>
+            <p> A proportional integral derivative (PID) controller can be used as a means of controlling temperature,
+                pressure, flow and other process variables. As its name implies, a PID controller combines proportional
+                control with additional integral and derivative adjustments which help the unit automatically compensate
+                for changes in the system. </p>
+        </div>
+        <button class="btn btn-primary" onclick="location.href = '../instructions/index.html';">Proceed to
+            Instructions</button>
+
+    </main>
+    <button class="btn btn-primary log-out" onclick="location.href = '../../logout'">Log out</button>
+</body>
+<script defer>
+    VANTA.NET({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00
+    })
+</script>
+
+</html>
